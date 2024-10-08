@@ -44,7 +44,8 @@
         </section>
     </div>
 
-    <script src="/JS/pass-show-hide.js"></script>
+    <script src="JS/pass-show-hide.js"></script>
+    <script src="JS/signup.js"></script>
 
 </body>
 </html>
