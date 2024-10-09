@@ -12,7 +12,7 @@
         <section class="form signup">
             <header>Let's Chat</header>
             <form action="#" encrypt="multipart/form-data">
-                <div class="error-txt">This is an Error message</div>
+                <div class="error-txt"></div>
                 <div class="name-details">
                     <div class="field input">
                         <label>First Name :</label>
@@ -40,7 +40,7 @@
                     <input type="submit" value="Continue to Chat">
                 </div>
             </form>
-            <div class="link">Already signed up ?  <a href="#">Login Now</a></div>
+            <div class="link">Already signed up ?  <a href="login.php">Login Now</a></div>
         </section>
     </div>
 

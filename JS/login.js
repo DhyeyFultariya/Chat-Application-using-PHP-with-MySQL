@@ -1,5 +1,5 @@
 
-const form  = document.querySelector(".signup form");
+const form  = document.querySelector(".login form");
 const continueBtn = form.querySelector(".button input");
 const errorText = form.querySelector(".error-txt");
 
@@ -10,11 +10,12 @@ form.onsubmit = (e) => {
 continueBtn.onclick = () => {
     // Start AJEX
     const xhr = new XMLHttpRequest();  // Create XML object
-    xhr.open("POST", "php/signup.php", true);
+    xhr.open("POST", "php/login.php", true);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.response;
+                console.log(data);
                 if (data === "success") {
                     location.href = "users.php";
                 } else {
