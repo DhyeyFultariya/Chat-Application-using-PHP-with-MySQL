@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Chat</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</head>
+<?php include_once "header.php";  ?>
+
 <body>
     
     <div class="wrapper">
         <section class="users">
             <header>
+            <?php
+
+            ?>
                 <div class="content">
                     <img src="./assets/avatar1.jpg" alt="">
                     <div class="details">
@@ -49,7 +45,7 @@
                 </a>
                 <a href="#">
                     <div class="content">
-                        <img src="assets/avatar14.jpg" alt="">
+                        <img src="assets/avatar14.jpg" alt=""> 
                         <div class="details">
                             <span>Kate</span>
                             <p>This is the test message</p>
