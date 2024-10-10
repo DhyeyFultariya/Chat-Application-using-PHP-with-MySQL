@@ -7,3 +7,18 @@ searchBtn.onclick = () => {
     searchBar.focus();
     searchBtn.classList.toggle("active");
 }
+
+setInterval(() => {
+    // Start AJEX
+    const xhr = new XMLHttpRequest();  // Create XML object
+    xhr.open("GET", "php/users.php", true);
+    xhr.onload = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let data = xhr.response;
+                console.log(data);
+            }
+        }
+    }
+    xhr.send();
+}, 500)     //this function will run frquently after 500ms
