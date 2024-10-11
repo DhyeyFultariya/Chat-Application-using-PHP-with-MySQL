@@ -24,6 +24,15 @@ sendBtn.onclick = () => {
         xhr.send(formData); // sending the form data to php 
 }
 
+chatBox.onmouseenter = () => {
+    chatBox.classList.add("active");
+}
+chatBox.onmouseleave = () => {
+    chatBox.classList.remove("active");
+}
+
+
+
 setInterval(() => {
     // Start AJEX
     const xhr = new XMLHttpRequest();  // Create XML object
@@ -33,9 +42,9 @@ setInterval(() => {
             if (xhr.status === 200) {
                 let data = xhr.response;
                 chatBox.innerHTML = data;
-                // if(!chatBox.classList.contains("active")){
+                if(!chatBox.classList.contains("active")){
                     scrollToBottom();
-                // }
+                }
             }
         }
     }
@@ -48,5 +57,3 @@ setInterval(() => {
 function scrollToBottom() {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
-
-
