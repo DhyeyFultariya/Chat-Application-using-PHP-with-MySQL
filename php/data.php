@@ -17,6 +17,7 @@ while($row = mysqli_fetch_assoc($sql)) {
     // adding you : text before msg if login id send msg
     ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: ": $you = ""; 
     // check if user online or offline
+    ($row['status'] == "offline now") ? $offline = "offline" : $offline = "";
 
 
     $output .= '<a href="chat.php?user_id='.$row['unique_id'].'">
@@ -27,7 +28,7 @@ while($row = mysqli_fetch_assoc($sql)) {
                             <p>'. $you . $msg .'</p>
                         </div>
                     </div>
-                    <div class="status-dot online"><i class="fas fa-circle"></i></div>
+                    <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
                 </a>';
 }
 
