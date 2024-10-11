@@ -24,10 +24,10 @@ sendBtn.onclick = () => {
         xhr.send(formData); // sending the form data to php 
 }
 
-chatBox.onmouseenter = () => {
+chatBox.onmouseenter = ()=>{
     chatBox.classList.add("active");
 }
-chatBox.onmouseleave = () => {
+chatBox.onmouseleave = ()=>{
     chatBox.classList.remove("active");
 }
 
