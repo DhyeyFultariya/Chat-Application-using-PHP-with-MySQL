@@ -15,6 +15,8 @@ sendBtn.onclick = () => {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.status === 200) {
                     inputField.value = "";
+                   
+                    scrollToBottom();
                 }
             }
         }
@@ -31,7 +33,11 @@ setInterval(() => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.response;
+                console.log(chatBox);
                 chatBox.innerHTML = data;
+                if(!chatBox.classList.contains("active")){
+                    scrollToBottom();
+                }
             }
         }
     }
@@ -39,3 +45,14 @@ setInterval(() => {
     let formData = new FormData(form);  // Create new form data
     xhr.send(formData); // sending the form data to php 
 }, 500)     //this function will run frquently after 500ms
+
+// function scrollToBottom() {
+//     chatBox.scrollTop = chatBox.scrollHeight;
+// }
+
+
+function scrollToBottom() {
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+
